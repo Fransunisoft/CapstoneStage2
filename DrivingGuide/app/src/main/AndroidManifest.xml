@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fransunisoft.drivingguide">
+
+    <!-- Include required permissions for Google Mobile Ads to run. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <!--debug key-->
+    <!-- AIzaSyAQT7ukkdHMtZ_rMD9ssdWJ_7b-WdTD3eg -->
+    <!-- &lt;!&ndash;AIzaSyApG7R7wX8fShhj-YNtyA1U5ZXrbeHSigI&ndash;&gt; from My Thoshiba -->
+    <!--production Key-->
+    <!--AIzaSyDtq5ypZE5XnnWV9NEco5_vvf7qDRbZq6E-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <!-- change the key here-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDtq5ypZE5XnnWV9NEco5_vvf7qDRbZq6E" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".Tutorials"
+            android:label="@string/title_activity_tutorials"
+            android:parentActivityName=".DrivingDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.MainActivity" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+        </activity>
+        <activity
+            android:name=".SignRules"
+            android:label="@string/title_activity_signrules"
+            android:parentActivityName=".DrivingDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.MainActivity" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+        </activity>
+        <activity
+            android:name=".Guide"
+            android:label="@string/title_activity_Guide"
+            android:parentActivityName=".DrivingDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.MainActivity" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".PlaceActivity"
+            android:label="@string/title_activity_trafficupdate"
+            android:parentActivityName=".DrivingDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.MainActivity" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".DrivingDetails"
+            android:label="@string/title_activity_prayer"
+            android:parentActivityName=".Tutorials"/>
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        />
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".DrivingDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".signs.TrafficSigns"
+            android:label="@string/title_activity_traffic_signs"
+            android:parentActivityName=".SignRules"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.SignRules" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".signs.ProhibitorySigns"
+            android:label="@string/title_activity_prohibitory_signs"
+            android:parentActivityName=".SignRules"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.SignRules" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".signs.RegulatorySigns"
+            android:label="@string/title_activity_regulatory_sign"
+            android:parentActivityName=".SignRules"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.SignRules" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".signs.InformationSigns"
+            android:label="@string/title_activity_information_signs"
+            android:parentActivityName=".SignRules"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.SignRules" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".signs.WarningSigns"
+            android:label="@string/title_activity_warning_signs"
+            android:parentActivityName=".SignRules"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.SignRules" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <activity
+            android:name=".signs.TrafficLight"
+            android:label="@string/title_activity_traffic_light"
+            android:parentActivityName=".SignRules"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fransunisoft.drivingguide.SignRules" />
+            <!-- This meta-data tag is required to use Google Play Services. -->
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+        <provider
+            android:exported="true"
+            android:authorities="com.fransunisoft.drivingguide"
+            android:name=".Data.DGprovider"/>
+
+        <receiver android:name=".widget.WidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_today" />
+        </receiver>
+
+    </application>
+
+</manifest>

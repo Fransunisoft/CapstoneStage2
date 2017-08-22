@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary">#3F51B5</color>
+    <color name="Dark">#303F9F</color>
+    <color name="Accent">#FF4081</color>
+
+    <color name="colorPrimary">#E65100</color>  <!-- 500 -->
+    <color name="colorPrimaryDark">#EF6C00</color>  <!-- 700 -->
+    <color name="primary_light">#FB8C00</color> <!-- 100 -->
+    <color name="colorAccent">#FF9800</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+
+    <color name="colorBrightBlue">#9400b2ff</color>
+</resources>

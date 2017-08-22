@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#c5cae9"
+    android:gravity="center_horizontal"
+    android:paddingBottom="6dp"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    android:paddingTop="6dp"
+    tools:context="com.fransunisoft.drivingguide.SignRules">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#039be5"
+        android:id="@+id/card1"
+        card_view:contentPadding="10dp"
+        card_view:cardElevation="2dp"
+        card_view:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/manualtittle"
+                android:textColor="@color/primary_light" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_description"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/manualbody"
+                android:textColor="@color/primary_light" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+        <Button
+            android:id="@+id/buttontrafficlight"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#ffff"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/traffic_light"
+            android:text="@string/traffic_light_signal"
+            android:textColor="@color/primary_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/card1"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+        android:id="@+id/buttontraffic"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ffff"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/traf_icon"
+        android:text="@string/traffic_light_signs"
+        android:textColor="@color/primary_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/buttontrafficlight"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonpro"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffff"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/pro2_icon"
+        android:text="@string/prohibitory_signs"
+        android:textColor="@color/primary_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/buttontraffic"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonreg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffff"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/reg_icon"
+        android:text="@string/regualtory_signs"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text"
+        android:layout_below="@+id/buttonpro"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttoninf"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffff"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/inf_icon"
+        android:text="@string/information_signs"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text"
+        android:layout_below="@+id/buttonreg"
+        android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/buttonwarnings"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffff"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/pro_icon"
+            android:text="@string/warning_signs"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/primary_text"
+            android:layout_below="@+id/buttoninf"
+            android:layout_centerHorizontal="true"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer">
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+</ScrollView>
